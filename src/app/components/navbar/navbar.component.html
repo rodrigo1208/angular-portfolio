@@ -1,0 +1,11 @@
+<nav>
+  <div class="page-title">
+    {{ 'angular-portfolio.navbar.title' | translate }}
+  </div>
+  <ul>
+    <li *ngFor="let button of buttons" (click)="routeTo(button.link)" >
+      {{ button.description | translate }}
+    </li>
+  </ul>
+</nav>
+

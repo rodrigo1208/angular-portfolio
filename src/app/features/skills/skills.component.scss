@@ -1,0 +1,71 @@
+.skill {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 10px auto;
+  padding: 0 60px;
+
+  .skill-title {
+    width: 30%;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .stepper {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    .step-container {
+      display: flex;
+      align-items: center;
+      .step {
+        display: flex;
+        align-items: center;
+        position: relative;
+        &__circle {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          &.future {
+            background-color: white;
+            border: 3px solid var(--primary-light-blue);
+          }
+    
+          &.done {
+            background-color: var(--primary-dark-blue);
+            border: 3px solid white;
+          }
+        }
+        
+        &__label {
+          position: absolute;
+          bottom: -30px;
+          width: 100px;
+          color: black;
+        }
+      }
+      
+      .connector {
+        flex-grow: 1;
+        height: 4px;
+        &.done {
+          background-color: var(--primary-dark-blue);
+        }
+        &.future {
+          background-color: var(--primary-light-blue);
+        }
+      }
+    }
+    .step-label {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'RobotoThin', sans-serif;
+      font-style: italic;
+      font-size: 14px;
+    }
+
+    .step-label-active {
+      font-weight: 900;
+    }
+  }
+  
+}

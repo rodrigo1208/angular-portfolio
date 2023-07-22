@@ -1,0 +1,67 @@
+<div class="skill" *ngFor="let skill of skills">
+  <div class="skill-title">
+    {{skill.skillName}}
+  </div>
+  <div class="stepper">
+    <div class="step-container">
+      <ng-container [ngSwitch]="skill.level">
+        <ng-container *ngSwitchCase="1">
+          <ng-container *ngTemplateOutlet="level1"></ng-container>
+        </ng-container>
+        <ng-container *ngSwitchCase="2">
+          <ng-container *ngTemplateOutlet="level2"></ng-container>
+        </ng-container>
+        <ng-container *ngSwitchCase="3">
+          <ng-container *ngTemplateOutlet="level3"></ng-container>
+        </ng-container>
+      </ng-container>
+    </div>
+    <div class="step-label">
+      <span [class.step-label-active]="skill.level == 1">{{'angular-portfolio.skills.level1' | translate}}</span>
+      <span [class.step-label-active]="skill.level == 2">{{'angular-portfolio.skills.level2' | translate}}</span>
+      <span [class.step-label-active]="skill.level == 3">{{'angular-portfolio.skills.level3' | translate}}</span>
+    </div>
+  </div>
+</div>
+
+<ng-template #level1>
+  <ng-container *ngTemplateOutlet="doneStep"></ng-container>
+  <div class="connector done"></div>
+  <div class="connector future"></div>
+  <ng-container *ngTemplateOutlet="futureStep"></ng-container>
+  <div class="connector future"></div>
+  <div class="connector future"></div>
+  <ng-container *ngTemplateOutlet="futureStep"></ng-container>
+</ng-template>
+
+<ng-template #level2>
+  <ng-container *ngTemplateOutlet="doneStep"></ng-container>
+  <div class="connector done"></div>
+  <div class="connector done"></div>
+  <ng-container *ngTemplateOutlet="doneStep"></ng-container>
+  <div class="connector done"></div>
+  <div class="connector future"></div>
+  <ng-container *ngTemplateOutlet="futureStep"></ng-container>
+</ng-template>
+
+<ng-template #level3>
+  <ng-container *ngTemplateOutlet="doneStep"></ng-container>
+  <div class="connector done"></div>
+  <div class="connector done"></div>
+  <ng-container *ngTemplateOutlet="doneStep"></ng-container>
+  <div class="connector done"></div>
+  <div class="connector done"></div>
+  <ng-container *ngTemplateOutlet="doneStep"></ng-container>
+</ng-template>
+
+<ng-template #futureStep>
+  <div class="step">
+    <div class="step__circle future"></div>
+  </div>
+</ng-template>
+
+<ng-template #doneStep>
+  <div class="step">
+    <div class="step__circle done"></div>
+  </div>
+</ng-template>

@@ -1,0 +1,21 @@
+{
+  "angular-portfolio": {
+    "navbar": {
+      "title": "Portfólio",
+      "buttons": {
+        "home": "Início",
+        "skills": "Conhecimento"
+      }
+    },
+    "home": {
+      "name": "Rodrigo Cardoso",
+      "subtitle": "Desenvolvedor Full-stack",
+      "description": "Olá, sou Rodrigo Cardoso, um desenvolvedor full-stack apaixonado e experiente com foco em Java e Angular. Tenho uma sólida formação na criação de aplicações web utilizando Spring Boot. Com um olhar atento aos detalhes e um gosto pela resolução de problemas, busco criar experiências web intuitivas, eficientes e amigáveis ao usuário. Minha expertise está em desenvolver soluções robustas e escaláveis, aproveitando meu amplo conhecimento em tecnologias front-end e frameworks back-end. Dedico-me ao aprendizado contínuo e acompanhamento das últimas tendências do setor, garantindo que sempre entrego soluções de ponta. Se você procura um desenvolvedor habilidoso que possa dar vida às suas ideias de aplicativos web, sinta-se à vontade para explorar meu portfólio e entrar em contato!"
+    },
+    "skills": {
+      "level1": "Aprendiz",
+      "level2": "Experiente",
+      "level3": "Veterano"
+    }
+  }
+}

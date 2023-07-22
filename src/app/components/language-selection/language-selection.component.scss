@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--primary-light-blue);
+  font-size: 18px;
+  font-family: 'Roboto';
+  font-style: italic;
+}
+
+.language-selector {
+  margin: 0 5px;
+  cursor: pointer;
+  &.active {
+    color: white;
+    text-decoration: underline;
+  }
+}

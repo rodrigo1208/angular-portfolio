@@ -1,0 +1,5 @@
+<span *ngFor="let lang of langs"
+  (click)="switchTo(lang)" class="language-selector" [class.active]="isActive(lang)"
+  >
+  {{lang.toUpperCase()}}
+</span>
